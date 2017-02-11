@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" ng-app="restAngular">
+    <head>
+        <meta charset="utf-8">       
+        <title>Scholarships</title>        
+        <!-- Downloaded Scripts -->
+        <link rel="stylesheet" href="app.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-resource.js"></script>
+        <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+        <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="http://getbootstrap.com/examples/dashboard/dashboard.css" rel="stylesheet">
+        <!-- Created Scripts --> 
+        <script src="js/app.js"></script>
+        <script src="js/services.js"></script> 
+        <script src="js/controllers.js"></script>        
+    </head>
+    <body>
+        <div align="center"> 
+            <div class="container"> 
+                <div ng-controller="MyCtrl1">
+                   <table class="table-condensed">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>level</th>
+        <th>field</th>
+        <th>country</th>
+        <th>language</th>
+        <th>university</th>
+        <th>link</th>
+      </tr>
+    </thead>
+    <tbody>
+  <tr ng-repeat="onescholarship in allscholarship">
+    <td>{{ onescholarship.id }}</td>
+    <td>{{ onescholarship.level }}</td>
+    <td>{{ onescholarship.field }}</td>
+    <td>{{ onescholarship.country }}</td>
+    <td>{{ onescholarship.language }}</td>
+    <td>{{ onescholarship.university }}</td>
+    <td>{{ onescholarship.link }}</td>
+  </tr>
+    </tbody>
+</table> 
+                </div>
+            </div> 
+        </div>
+    </body> 
+</html> 
